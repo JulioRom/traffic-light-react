@@ -1,46 +1,94 @@
-<!-- hide -->
+# Simulación de semáforo
 
-> ⚠️ This repository is deprecated and has no maintenance; we recommend using the [React Hello Vite](https://github.com/4GeeksAcademy/react-hello-vite) template instead.
+Este proyecto es una simulación de un semáforo creado con React. Permite a los usuarios interactuar con el semáforo haciendo clic en las luces para encenderlas y apagarlas. Las características adicionales incluyen alternar entre colores y agregar dinámicamente un nuevo color de luz.
 
-# Hello World with React boilerplate
+## Características
 
-Start coding a react application
+- **Semáforo interactivo**: haz clic en cualquier luz (roja, amarilla, verde) para encenderla y apagar las demás.
+- **Botón de alternancia**: un botón que alterna entre los colores de la luz en secuencia.
+- **Agregar nueva luz**: un botón para agregar dinámicamente una luz violeta al semáforo.
+- **Efectos visuales mejorados**: las luces se iluminan y agrandan levemente cuando están activas, para una mejor visibilidad.
 
-<!-- endhide -->
+## Instalación
 
-## How to start coding?
+Para ejecutar este proyecto localmente, siga estos pasos:
 
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
-
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
-
-## Local Installation (skip if you are working on codespaces or gitpod)
-
-Download the boilerplate using git
-
+1. Clone el repositorio:
+```bash
+git clone <repository-url>
 ```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
+2. Navegue hasta el directorio del proyecto:
+```bash
+cd Traffic-light-simulation
+```
+3. Instale las dependencias:
+```bash
+npm install
+```
+4. Inicie el servidor de desarrollo:
+```bash
+npm start
+```
+5. Abra su navegador y navegue hasta:
+```
+http://localhost:3000
 ```
 
-## Publish your website!
+## Descripción general del código
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+### Componente principal: `TrafficLight`
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+- **Administración de estado**:
+- `color`: rastrea el color activo actualmente.
+- `colors`: una matriz de colores de luz disponibles (inicialmente rojo, amarillo, verde).
+- **Funciones**:
+- `toggleColor`: recorre los colores de luz secuencialmente.
+- `addPurple`: Agrega una luz violeta al semáforo si aún no existe.
+- **Renderizado**:
+- Un `div` representa cada luz, con un estilo dinámico para indicar la luz activa.
 
-## Other features
+### Estilo
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+- El contenedor del semáforo tiene un estilo que se asemeja a un semáforo del mundo real.
+- Las luces son circulares y cambian de apariencia (brillo y tamaño) cuando están activas.
+- El contenedor se centra en la pantalla mediante CSS flexbox.
 
-### Contributors
+### Botones
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+- **Alternar color**: Cambia de luces.
+- **Agregar púrpura**: Agrega una luz violeta de manera dinámica.
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+## Estructura de archivo
+
+```plaintext
+.
+├── src
+│ ├── index.js # Punto de entrada para la aplicación
+│ ├── TrafficLight.js # Componente principal con todas las funciones
+│ └── styles.css # Estilos para la aplicación
+├── public
+│ └── index.html # Plantilla HTML
+├── package.json # Dependencias y scripts del proyecto
+└── README.md # Documentación del proyecto
+```
+
+## Mejoras futuras
+
+- **Colores personalizados**: permite a los usuarios agregar cualquier color ingresando un código hexadecimal o seleccionando de un selector de color.
+- **Automatización temporizada**: alterna automáticamente las luces a intervalos fijos.
+- **Optimización móvil**: mejora el diseño y la interacción táctil para dispositivos móviles.
+
+## Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## Contribución
+
+No dudes en bifurcar el repositorio y enviar solicitudes de incorporación de mejoras o correcciones de errores. ¡Las contribuciones son bienvenidas!
+
+## Autor
+
+- **Desarrollado por JulioRom**  
+- **Contacto:** [julioandrescampos@gmail.com](mailto:julioandrescampos@gmail.com)  
+- **GitHub:** [https://github.com/JulioRom](https://github.com/JulioRom)
+
