@@ -15,11 +15,11 @@ Para ejecutar este proyecto localmente, siga estos pasos:
 
 1. Clone el repositorio:
 ```bash
-git clone <repository-url>
+git clone https://github.com/JulioRom/traffic-light-react
 ```
 2. Navegue hasta el directorio del proyecto:
 ```bash
-cd Traffic-light-simulation
+cd traffic-light-simulation
 ```
 3. Instale las dependencias:
 ```bash
@@ -27,7 +27,7 @@ npm install
 ```
 4. Inicie el servidor de desarrollo:
 ```bash
-npm start
+npm run start
 ```
 5. Abra su navegador y navegue hasta:
 ```
